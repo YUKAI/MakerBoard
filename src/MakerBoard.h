@@ -28,6 +28,16 @@
 #define LED_BLUE A1
 #define TIMER_FREQUENCY 1
 
+static void motorPinSetup(){
+  pinMode(DCM1_A, OUTPUT);
+  pinMode(DCM1_B, OUTPUT);
+  pinMode(DCM2_A, OUTPUT);
+  pinMode(DCM2_B, OUTPUT);
+  pinMode(DCM3_A, OUTPUT);
+  pinMode(DCM3_B, OUTPUT);
+  pinMode(DCM4_A, OUTPUT);
+  pinMode(DCM4_B, OUTPUT);
+}
 static void motorCnt(MakerBoardMotor motor)
 {
   if (motor.top_cnt < motor.duration)
