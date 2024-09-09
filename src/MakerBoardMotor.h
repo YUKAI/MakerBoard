@@ -5,7 +5,7 @@
 
 #define FORWARD 1
 #define BACKWARD -1
-#define TIME 20
+#define PERIODIC_TIME 20   // Periodic time[ms]
 
 class MakerBoardMotor
 {

@@ -42,7 +42,7 @@ static void motorCnt(MakerBoardMotor motor)
 {
   if (motor.top_cnt < motor.duration)
     digitalWrite(motor.pinSwitch(), HIGH);
-  else if (motor.top_cnt >= motor.duration && motor.top_cnt < TIME)
+  else if (motor.top_cnt >= motor.duration && motor.top_cnt < PERIODIC_TIME)
     digitalWrite(motor.pinSwitch(), LOW);
 }
 static void motorRun()
@@ -55,13 +55,13 @@ static void motorRun()
   motor2.top_cnt++;
   motor3.top_cnt++;
   motor4.top_cnt++;
-  if (motor1.top_cnt > TIME)
+  if (motor1.top_cnt > PERIODIC_TIME)
     motor1.top_cnt = 0;
-  if (motor2.top_cnt > TIME)
+  if (motor2.top_cnt > PERIODIC_TIME)
     motor2.top_cnt = 0;
-  if (motor3.top_cnt > TIME)
+  if (motor3.top_cnt > PERIODIC_TIME)
     motor3.top_cnt = 0;
-  if (motor4.top_cnt > TIME)
+  if (motor4.top_cnt > PERIODIC_TIME)
     motor4.top_cnt = 0;
 }
 #endif

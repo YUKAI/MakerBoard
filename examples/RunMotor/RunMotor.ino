@@ -1,5 +1,6 @@
 """
-MakerBoard library contains pin name, PWM generate function for DC motors.
+This example run DC motor and servo motor.
+Please connect a DC motor to motor pin 1, and connect servo motor to servo motor pin 1.
 """
 
 #include <MakerBoard.h>
@@ -22,10 +23,9 @@ void setup() {
 }
 
 void loop() {
-    // Motor1 rotate 
-    motor1.set(100, FORWARD);
+    motor1.set(100, FORWARD);       // Motor1 rotate 
     delay(1*1000UL);
-    Servo1.write(90);
+    Servo1.write(90);               // Servo motor rotate
     delay(1*1000UL);
     motor1.set(100, BACKWARD);
     delay(1*1000UL);

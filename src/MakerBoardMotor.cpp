@@ -30,6 +30,6 @@ void MakerBoardMotor::set(int16_t duration, int8_t direction)
   {
     this->direction = direction;
   }
-  this->duration = abs(TIME * duration / 100);
+  this->duration = abs(PERIODIC_TIME * duration / 100);
 }
 
