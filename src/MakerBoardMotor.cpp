@@ -21,12 +21,12 @@ MakerBoardMotor::MakerBoardMotor(uint8_t INA, uint8_t INB)
  */
 int MakerBoardMotor::pinSwitch()
 {
-  if (this->direction == FORWARD)
+  if (this->direction == this->FORWARD)
   {
     digitalWrite(this->pin_B, LOW);
     return this->pin_A;
   }
-  if (this->direction == BACKWARD)
+  if (this->direction == this->BACKWARD)
   {
     digitalWrite(this->pin_A, LOW);
     return this->pin_B;
@@ -42,7 +42,7 @@ void MakerBoardMotor::set(int16_t duration, int8_t direction)
 {
   if (duration < 0)
   {
-    this->direction = direction == FORWARD ? BACKWARD : FORWARD;
+    this->direction = direction == this->FORWARD ? this->BACKWARD : this->FORWARD;
   }
   else
   {
@@ -53,6 +53,6 @@ void MakerBoardMotor::set(int16_t duration, int8_t direction)
   }else if(duration < -100){
     duration = -100;
   }
-  this->duration = abs(PERIODIC_TIME * duration / 100);
+  this->duration = abs(this->PERIODIC_TIME * duration / 100);
 }
 

@@ -14,64 +14,36 @@
 #include <Arduino.h>
 #include "MakerBoardMotor.h"
 
-#define DCM1_A 4
-#define DCM1_B 5
-#define DCM2_A 2
-#define DCM2_B 3
-#define DCM3_A 8
-#define DCM3_B 9
-#define DCM4_A 7
-#define DCM4_B 6
-
-#define SERVO1 10
-#define SERVO2 11
-#define SERVO3 12
-#define SERVO4 13
-
-#define GROVE_CON1_SIG A2
-#define GROVE_CON1_OPT A3
-#define GROVE_CON2_SIG A5
-#define GROVE_CON2_OPT A4
-#define GROVE_CON3_SIG A6
-#define GROVE_CON3_OPT A7
-#define LED_RED A0
-#define LED_BLUE A1
-#define TIMER_FREQUENCY 1
-
-static void motorPinSetup(){
-  pinMode(DCM1_A, OUTPUT);
-  pinMode(DCM1_B, OUTPUT);
-  pinMode(DCM2_A, OUTPUT);
-  pinMode(DCM2_B, OUTPUT);
-  pinMode(DCM3_A, OUTPUT);
-  pinMode(DCM3_B, OUTPUT);
-  pinMode(DCM4_A, OUTPUT);
-  pinMode(DCM4_B, OUTPUT);
-}
-static void motorRun(MakerBoardMotor motor)
+class MakerBoard
 {
-  if (motor.top_cnt < motor.duration)
-    digitalWrite(motor.pinSwitch(), HIGH);
-  else if (motor.top_cnt >= motor.duration && motor.top_cnt < PERIODIC_TIME)
-    digitalWrite(motor.pinSwitch(), LOW);
-}
-static void motorPulseCounter()
-{
-  motorRun(motor1);
-  motorRun(motor2);
-  motorRun(motor3);
-  motorRun(motor4);
-  motor1.top_cnt++;
-  motor2.top_cnt++;
-  motor3.top_cnt++;
-  motor4.top_cnt++;
-  if (motor1.top_cnt > PERIODIC_TIME)
-    motor1.top_cnt = 0;
-  if (motor2.top_cnt > PERIODIC_TIME)
-    motor2.top_cnt = 0;
-  if (motor3.top_cnt > PERIODIC_TIME)
-    motor3.top_cnt = 0;
-  if (motor4.top_cnt > PERIODIC_TIME)
-    motor4.top_cnt = 0;
-}
+  public:
+    static const uint8_t DCM1_A = 4;
+    static const uint8_t DCM1_B = 5;
+    static const uint8_t DCM2_A = 2;
+    static const uint8_t DCM2_B = 3;
+    static const uint8_t DCM3_A = 8;
+    static const uint8_t DCM3_B = 9;
+    static const uint8_t DCM4_A = 7;
+    static const uint8_t DCM4_B = 6;
+
+    static const uint8_t SERVO1 = 10;
+    static const uint8_t SERVO2 = 11;
+    static const uint8_t SERVO3 = 12;
+    static const uint8_t SERVO4 = 13;
+
+    static const uint8_t GROVE_CON1_SIG = A2;
+    static const uint8_t GROVE_CON1_OPT = A3;
+    static const uint8_t GROVE_CON2_SIG = A5;
+    static const uint8_t GROVE_CON2_OPT = A4;
+    static const uint8_t GROVE_CON3_SIG = A6;
+    static const uint8_t GROVE_CON3_OPT = A7;
+    static const uint8_t LED_RED = A0;
+    static const uint8_t LED_BLUE = A1;
+    static const uint8_t TIMER_FREQUENCY = 1;
+    
+    void motorPinSetup();
+    static void motorRun(MakerBoardMotor motor);
+    static void motorPulseCounter();
+};
+
 #endif
