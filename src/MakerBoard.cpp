@@ -1,4 +1,14 @@
-#include "Arduino.h"
+/**
+ * @file MakerBoard.h
+ * @author Yoshinobu Obata (yobata@ux-xu.com)
+ * @brief standard library for Maker Board
+ * @version 0.1
+ * @date 2024-09-10
+ * 
+ * @copyright Copyright (c) Yoshinobu Obata 2024 for Yukai Engineering Inc.
+ * 
+ */
+#include <Arduino.h>
 #include "MakerBoard.h"
 
 MakerBoardMotor motor1(DCM1_A, DCM1_B);

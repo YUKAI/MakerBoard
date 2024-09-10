@@ -1,7 +1,7 @@
-"""
+/*
 This example run DC motor and servo motor.
 Please connect a DC motor to motor pin 1, and connect servo motor to servo motor pin 1.
-"""
+*/
 
 #include <MakerBoard.h>
 #include <Servo.h>
@@ -16,7 +16,7 @@ void setup() {
     // DC motor pin setup
     motorPinSetup();
     // Set DC motor control PWM generation with timer
-    MsTimer2::set(TIMER_FREQUENCY, motorRun);
+    MsTimer2::set(TIMER_FREQUENCY, motorPulseCounter);
     MsTimer2::start();
 
     Serial.begin(38400);

@@ -1,7 +1,17 @@
+/**
+ * @file MakerBoard.h
+ * @author Yoshinobu Obata (yobata@ux-xu.com)
+ * @brief standard library for Maker Board
+ * @version 0.1
+ * @date 2024-09-10
+ * 
+ * @copyright Copyright (c) Yoshinobu Obata 2024 for Yukai Engineering Inc.
+ * 
+ */
 #ifndef MakerBoard_H
 #define MakerBoard_H
 
-#include "Arduino.h"
+#include <Arduino.h>
 #include "MakerBoardMotor.h"
 
 #define DCM1_A 4
@@ -38,19 +48,19 @@ static void motorPinSetup(){
   pinMode(DCM4_A, OUTPUT);
   pinMode(DCM4_B, OUTPUT);
 }
-static void motorCnt(MakerBoardMotor motor)
+static void motorRun(MakerBoardMotor motor)
 {
   if (motor.top_cnt < motor.duration)
     digitalWrite(motor.pinSwitch(), HIGH);
   else if (motor.top_cnt >= motor.duration && motor.top_cnt < PERIODIC_TIME)
     digitalWrite(motor.pinSwitch(), LOW);
 }
-static void motorRun()
+static void motorPulseCounter()
 {
-  motorCnt(motor1);
-  motorCnt(motor2);
-  motorCnt(motor3);
-  motorCnt(motor4);
+  motorRun(motor1);
+  motorRun(motor2);
+  motorRun(motor3);
+  motorRun(motor4);
   motor1.top_cnt++;
   motor2.top_cnt++;
   motor3.top_cnt++;

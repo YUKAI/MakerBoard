@@ -1,7 +1,17 @@
+/**
+ * @file MakerBoardMotor.h
+ * @author Yoshinobu Obata (yobata@ux-xu.com)
+ * @brief motor class for Maker Board
+ * @version 0.1
+ * @date 2024-09-10
+ * 
+ * @copyright Copyright (c) Yoshinobu Obata 2024 for Yukai Engineering Inc.
+ * 
+ */
 #ifndef MakerBoardMotor_H
 #define MakerBoardMotor_H
 
-#include "Arduino.h"
+#include <Arduino.h>
 
 #define FORWARD 1
 #define BACKWARD -1
