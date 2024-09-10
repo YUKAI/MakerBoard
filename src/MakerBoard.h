@@ -17,6 +17,7 @@
 class MakerBoard
 {
   public:
+    // DC motor control IO pins
     static const uint8_t DCM1_A = 4;
     static const uint8_t DCM1_B = 5;
     static const uint8_t DCM2_A = 2;
@@ -25,12 +26,12 @@ class MakerBoard
     static const uint8_t DCM3_B = 9;
     static const uint8_t DCM4_A = 7;
     static const uint8_t DCM4_B = 6;
-
+    // Servo motor IO pins
     static const uint8_t SERVO1 = 10;
     static const uint8_t SERVO2 = 11;
     static const uint8_t SERVO3 = 12;
     static const uint8_t SERVO4 = 13;
-
+    // Grove IO pins
     static const uint8_t GROVE_CON1_SIG = A2;
     static const uint8_t GROVE_CON1_OPT = A3;
     static const uint8_t GROVE_CON2_SIG = A5;

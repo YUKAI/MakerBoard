@@ -19,12 +19,10 @@ void setup() {
     // Set DC motor control PWM generation with timer
     MsTimer2::set(board.TIMER_FREQUENCY, board.motorPulseCounter);
     MsTimer2::start();
-
-    Serial.begin(38400);
 }
 
 void loop() {
-    motor1.set(100, motor1.FORWARD);    // Motor1 rotate forward
+    motor1.set(100, motor1.FORWARD);    // Motor1 rotate forward. Object motor1 was included from MakerBoard.h
     delay(1*1000UL);
     Servo1.write(90);   // Servo motor rotate
     delay(1*1000UL);

@@ -27,6 +27,12 @@ void MakerBoard::motorPinSetup(){
   pinMode(this->DCM4_A, OUTPUT);
   pinMode(this->DCM4_B, OUTPUT);
 }
+
+/**
+ * @brief モーター制御ピンを使ってモーターを回転させる (Rotate the motor using the motor control pin)
+ * 
+ * @param motor モータークラス (Motor Class)
+ */
 static void MakerBoard::motorRun(MakerBoardMotor motor)
 {
   if (motor.top_cnt < motor.duration)
@@ -34,6 +40,12 @@ static void MakerBoard::motorRun(MakerBoardMotor motor)
   else if (motor.top_cnt >= motor.duration && motor.top_cnt < motor.PERIODIC_TIME)
     digitalWrite(motor.pinSwitch(), LOW);
 }
+
+/**
+ * @brief モーターを回転させ，パルスのトップをカウントする．このメソッドはTIMER_FREQUENCYでタイマー実行されることを想定している．
+ * (Rotate the motor and count the top of the pulses. This method is assumed to be executed by a timer with TIMER_FREQUENCY.)
+ * 
+ */
 static void MakerBoard::motorPulseCounter()
 {
   motorRun(motor1);

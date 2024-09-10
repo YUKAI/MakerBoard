@@ -2,6 +2,7 @@
  * @file MakerBoard_Motor.cpp
  * @author Yoshinobu Obata (yobata@ux-xu.com)
  * @brief motor class for Maker Board
+ * @version 0.1
  * @date 2024-09-10
  * 
  * @copyright Copyright (c) Yoshinobu Obata 2024 for Yukai Engineering Inc.
@@ -17,7 +18,8 @@ MakerBoardMotor::MakerBoardMotor(uint8_t INA, uint8_t INB)
 }
 
 /**
- * パルス幅を制御するピンを切り替える．HIGHを入力するピンを返す．
+ * パルス幅を制御するピンを切り替える．
+ * Switch the pin that controls the pulse width. 
  */
 int MakerBoardMotor::pinSwitch()
 {
@@ -35,8 +37,8 @@ int MakerBoardMotor::pinSwitch()
 /**
  * @brief 
  * 
- * @param duration rotation speed [0% ~ 100%]
- * @param direction rotation direction [FOWARD or BACKWARD]
+ * @param duration 回転速度率 (rotation speed rate) [0% ~ 100%]
+ * @param direction 回転方向 (rotation direction) [FOWARD or BACKWARD]
  */
 void MakerBoardMotor::set(int16_t duration, int8_t direction)
 {
