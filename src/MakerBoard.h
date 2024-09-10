@@ -1,11 +1,12 @@
 /**
  * @file MakerBoard.h
- * @author Yoshinobu Obata (yobata@ux-xu.com)
+ * @author Yoshinobu Obata
  * @brief standard library for Maker Board
  * @version 0.1
  * @date 2024-09-10
+ * Change log:
  * 
- * @copyright Copyright (c) Yoshinobu Obata 2024 for Yukai Engineering Inc.
+ * @copyright Copyright (c) 2024 Yukai Engineering Inc.
  * 
  */
 #ifndef MakerBoard_H
