@@ -59,3 +59,17 @@ void MakerBoardMotor::set(int16_t duration, int8_t direction)
   this->duration = abs(this->PERIODIC_TIME * duration / 100);
 }
 
+/**
+ * @brief モーター制御ピンを使ってモーターを回転させる (Rotate the motor using the motor control pin)
+ * 
+ * @param motor モータークラス (Motor Class)
+ */
+void MakerBoardMotor::run()
+{
+  if (this->top_cnt < this->duration){
+    digitalWrite(this->pinSwitch(), HIGH);
+  }
+  else if (this->top_cnt >= this->duration && this->top_cnt < this->PERIODIC_TIME){
+    digitalWrite(this->pinSwitch(), LOW);
+  }
+}

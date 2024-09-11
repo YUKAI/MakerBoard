@@ -44,8 +44,8 @@ class MakerBoard
     static const uint8_t TIMER_FREQUENCY = 1;
     
     void motorPinSetup();
-    static void motorRun(MakerBoardMotor motor);
     static void motorPulseCounter();
+    void motorPWMBegin();
 };
 
 #endif

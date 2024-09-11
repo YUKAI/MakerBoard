@@ -30,6 +30,7 @@ public:
   MakerBoardMotor(uint8_t INA, uint8_t INB);
   void set(int16_t duration, int8_t direction);
   int pinSwitch();
+  void run();
 };
 
 extern MakerBoardMotor motor1;
