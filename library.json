@@ -1,0 +1,27 @@
+{
+    "name": "MakerBoard",
+    "version": "1.0.0",
+    "description": "Library for the MakerBoard standard library",
+    "keywords": "motor, arduino pro mini, pwm, Maker Bord",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/YUKAI/MakerBoard"
+    },
+    "authors": [
+      {
+        "name": "Yukai Engineering Inc.",
+        "email": "kurikit_support@ux-xu.com",
+        "url": "https://kurikit.ux-xu.com/",
+        "maintainer": true
+      },
+      {
+        "name": "Yoshinobu Obata",
+        "email": "yobata@ux-xu.com",
+        "maintainer": true
+      }
+    ],
+    "license": "MIT",
+    "homepage": "https://your-library-homepage.com",
+    "frameworks": "arduino",
+    "platforms": "atmelavr"
+  }
