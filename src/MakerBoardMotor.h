@@ -33,9 +33,9 @@ public:
   void run();
 };
 
-extern MakerBoardMotor motor1;
-extern MakerBoardMotor motor2;
-extern MakerBoardMotor motor3;
-extern MakerBoardMotor motor4;
+extern MakerBoardMotor Motor1;
+extern MakerBoardMotor Motor2;
+extern MakerBoardMotor Motor3;
+extern MakerBoardMotor Motor4;
 
 #endif

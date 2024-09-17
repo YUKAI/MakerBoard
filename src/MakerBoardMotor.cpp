@@ -19,8 +19,8 @@ MakerBoardMotor::MakerBoardMotor(uint8_t INA, uint8_t INB)
 }
 
 /**
- * パルス幅を制御するピンを切り替える．
- * Switch the pin that controls the pulse width. 
+ * @brief パルス幅を制御するピンを切り替える．
+ * (Switch the pin that controls the pulse width.)
  */
 int MakerBoardMotor::pinSwitch()
 {
@@ -36,7 +36,8 @@ int MakerBoardMotor::pinSwitch()
   }
 }
 /**
- * @brief 
+ * @brief モーター回転方向と回転速度を設定する．
+ * (Set motor direction and rotation speed rate.)
  * 
  * @param duration 回転速度率 (rotation speed rate) [0% ~ 100%]
  * @param direction 回転方向 (rotation direction) [FOWARD or BACKWARD]
@@ -60,7 +61,8 @@ void MakerBoardMotor::set(int16_t duration, int8_t direction)
 }
 
 /**
- * @brief モーター制御ピンを使ってモーターを回転させる (Rotate the motor using the motor control pin)
+ * @brief モーター制御ピンを使ってモーターを回転させる． 
+ * (Rotate the motor using the motor control pin.)
  * 
  * @param motor モータークラス (Motor Class)
  */

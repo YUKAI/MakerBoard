@@ -13,10 +13,10 @@
 #include "MakerBoard.h"
 #include <MsTimer2.h>
 
-MakerBoardMotor motor1(MakerBoard::DCM1_A, MakerBoard::DCM1_B);
-MakerBoardMotor motor2(MakerBoard::DCM2_A, MakerBoard::DCM2_B);
-MakerBoardMotor motor3(MakerBoard::DCM3_A, MakerBoard::DCM3_B);
-MakerBoardMotor motor4(MakerBoard::DCM4_A, MakerBoard::DCM4_B);
+MakerBoardMotor Motor1(MakerBoard::DCM1_A, MakerBoard::DCM1_B);
+MakerBoardMotor Motor2(MakerBoard::DCM2_A, MakerBoard::DCM2_B);
+MakerBoardMotor Motor3(MakerBoard::DCM3_A, MakerBoard::DCM3_B);
+MakerBoardMotor Motor4(MakerBoard::DCM4_A, MakerBoard::DCM4_B);
 
 /**
  * @brief DCモーターのピン設定．GPIO２〜GPIO９ピンが使用される．
@@ -40,25 +40,25 @@ void MakerBoard::motorPinSetup(){
  */
 static void MakerBoard::motorPulseCounter()
 {
-  motor1.run();
-  motor2.run();
-  motor3.run();
-  motor4.run();
-  motor1.top_cnt++;
-  motor2.top_cnt++;
-  motor3.top_cnt++;
-  motor4.top_cnt++;
-  if (motor1.top_cnt > motor1.PERIODIC_TIME){
-    motor1.top_cnt = 0;
+  Motor1.run();
+  Motor2.run();
+  Motor3.run();
+  Motor4.run();
+  Motor1.top_cnt++;
+  Motor2.top_cnt++;
+  Motor3.top_cnt++;
+  Motor4.top_cnt++;
+  if (Motor1.top_cnt > Motor1.PERIODIC_TIME){
+    Motor1.top_cnt = 0;
   }
-  if (motor2.top_cnt > motor2.PERIODIC_TIME){
-    motor2.top_cnt = 0;
+  if (Motor2.top_cnt > Motor2.PERIODIC_TIME){
+    Motor2.top_cnt = 0;
   }
-  if (motor3.top_cnt > motor3.PERIODIC_TIME){
-    motor3.top_cnt = 0;
+  if (Motor3.top_cnt > Motor3.PERIODIC_TIME){
+    Motor3.top_cnt = 0;
   }
-  if (motor4.top_cnt > motor4.PERIODIC_TIME){
-    motor4.top_cnt = 0;
+  if (Motor4.top_cnt > Notor4.PERIODIC_TIME){
+    Motor4.top_cnt = 0;
   }
 }
 

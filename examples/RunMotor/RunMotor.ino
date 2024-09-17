@@ -23,12 +23,12 @@ void setup() {
 }
 
 void loop() {
-  motor1.set(100, motor1.FORWARD);    // Motor1 rotate forward. Object motor1 was included from MakerBoard.h
+  Motor1.set(100, Motor1.FORWARD);    // Motor1 rotate forward. Object motor1 was included from MakerBoard.h
   delay(1000);
   servo1.write(90);   // Servo motor rotate
   delay(1000);
 
-  motor1.set(50, motor1.BACKWARD);   // Motor1 rotate backward 
+  Motor1.set(50, Motor1.BACKWARD);   // Motor1 rotate backward 
   delay(1000);
   servo1.write(0);
   delay(1000);
