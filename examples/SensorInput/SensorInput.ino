@@ -22,5 +22,5 @@ void setup() {
 void loop() {
   Serial.print("Grove PIN1 value: ");
   Serial.println(analogRead(board.GROVE_CON1_SIG));
-  delay(1*1000UL);
+  delay(1000);
 }

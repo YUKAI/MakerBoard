@@ -13,23 +13,23 @@
 #include <MsTimer2.h>
 
 MakerBoard board;
-Servo Servo1;
+Servo servo1;
 
 void setup() {
   pinMode(board.SERVO1, OUTPUT);
-  Servo1.attach(board.SERVO1);
+  servo1.attach(board.SERVO1);
 
   board.motorPWMBegin();
 }
 
 void loop() {
   motor1.set(100, motor1.FORWARD);    // Motor1 rotate forward. Object motor1 was included from MakerBoard.h
-  delay(1*1000UL);
-  Servo1.write(90);   // Servo motor rotate
-  delay(1*1000UL);
+  delay(1000);
+  servo1.write(90);   // Servo motor rotate
+  delay(1000);
 
   motor1.set(50, motor1.BACKWARD);   // Motor1 rotate backward 
-  delay(1*1000UL);
-  Servo1.write(0);
-  delay(1*1000UL);
+  delay(1000);
+  servo1.write(0);
+  delay(1000);
 }

@@ -17,11 +17,11 @@ void setup() {
 
 void loop() {
   digitalWrite(board.LED_RED, HIGH);    // Red led ON 
-  delay(1*1000UL);
+  delay(1000);
   digitalWrite(board.LED_BLUE, HIGH);   // Blue led ON 
-  delay(1*1000UL);
+  delay(1000);
   digitalWrite(board.LED_RED, LOW);     // Red led OFF 
-  delay(1*1000UL);
+  delay(1000);
   digitalWrite(board.LED_BLUE, LOW);    // Blue led OFF
-  delay(1*1000UL);
+  delay(1000);
 }

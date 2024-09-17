@@ -19,8 +19,8 @@ MakerBoardMotor motor3(MakerBoard::DCM3_A, MakerBoard::DCM3_B);
 MakerBoardMotor motor4(MakerBoard::DCM4_A, MakerBoard::DCM4_B);
 
 /**
- * @brief DCモーターのピン設定 (Setup of DC motor driver pins)
- * 
+ * @brief DCモーターのピン設定．GPIO２〜GPIO９ピンが使用される．
+ * (Configure the DC motor driver pins from GPIO2 to GPIO9.)
  */
 void MakerBoard::motorPinSetup(){
   pinMode(this->DCM1_A, OUTPUT);
