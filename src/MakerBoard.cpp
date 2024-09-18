@@ -57,7 +57,7 @@ static void MakerBoard::motorPulseCounter()
   if (Motor3.top_cnt > Motor3.PERIODIC_TIME){
     Motor3.top_cnt = 0;
   }
-  if (Motor4.top_cnt > Notor4.PERIODIC_TIME){
+  if (Motor4.top_cnt > Motor4.PERIODIC_TIME){
     Motor4.top_cnt = 0;
   }
 }
