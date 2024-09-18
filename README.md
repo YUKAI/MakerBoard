@@ -1,7 +1,7 @@
 # MakerBoard
 Arduino互換機の[メイカーボード](https://prtimes.jp/main/html/rd/p/000000230.000015618.html)を簡単にテキストプログラミングするためのライブラリです．
 IOピンの抽象化，DCモーターのPWM生成を行います．Arduino UnoやArduino pro miniでも使用いただけます．
-ピンアサインは[MakerBoard.h](https://github.com/YUKAI/MakerBoard/edit/main/src/MakerBoard.h)をご確認ください．
+ピンアサインは[MakerBoard.h](https://github.com/YUKAI/MakerBoard/blob/main/src/MakerBoard.h)をご確認ください．
 
 This is Arduino based MakerBoard's standard library.
 This abstracts IO pins and generates PWM for DC motors.
