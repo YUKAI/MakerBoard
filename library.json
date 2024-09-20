@@ -1,8 +1,8 @@
 {
     "name": "MakerBoard",
     "version": "1.0.0",
-    "description": "Library for the MakerBoard standard library",
-    "keywords": "motor, arduino pro mini, pwm, Maker Bord",
+    "description": "Library for MakerBoard(メイカーボード)",
+    "keywords": "motor, arduino pro mini, pwm",
     "repository": {
       "type": "git",
       "url": "https://github.com/YUKAI/MakerBoard"

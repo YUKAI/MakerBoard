@@ -1,7 +1,7 @@
 /**
  * @file MakerBoardMotor.h
  * @author Yoshinobu Obata
- * @brief motor class for Maker Board
+ * @brief Motor class for メイカーボード
  * @version 0.1
  * @date 2024-09-10
  * Change log:

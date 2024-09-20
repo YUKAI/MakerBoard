@@ -1,7 +1,7 @@
 /**
  * @file MakerBoard.h
  * @author Yoshinobu Obata
- * @brief standard library for Maker Board
+ * @brief Standard library for メイカーボード
  * @version 0.1
  * @date 2024-09-10
  * Change log:

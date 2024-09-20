@@ -3,8 +3,7 @@ Arduino互換機の[メイカーボード](https://prtimes.jp/main/html/rd/p/000
 IOピンの抽象化，DCモーターのPWM生成を行います．Arduino UnoやArduino pro miniでも使用いただけます．
 ピンアサインは[MakerBoard.h](https://github.com/YUKAI/MakerBoard/blob/main/src/MakerBoard.h)をご確認ください．
 
-This is Arduino based MakerBoard's standard library.
-This abstracts IO pins and generates PWM for DC motors.
+This library abstracts IO pins and generates PWM for DC motors.
 It can also be used with Arduino Uno, Arduino pro mini and so on. 
 Please check [MakerBoard.h](https://github.com/YUKAI/MakerBoard/edit/main/src/MakerBoard.h) for pin assignment.
 
