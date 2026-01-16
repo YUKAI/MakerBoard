@@ -72,3 +72,30 @@ void MakerBoard::motorPWMBegin(){
   MsTimer2::set(this->TIMER_FREQUENCY, this->motorPulseCounter);
   MsTimer2::start();
 }
+
+/**
+ * @brief 超音波センサのコンストラクタ．(Constructor of Ultrasonic sensor.)
+ */
+MakerBoard::Ultrasonic::Ultrasonic(int TP, int EP)
+{
+  TP = TP;
+  EP = EP;
+}
+
+/**
+ * @brief 超音波センサ(HC-SR04)で距離を測定する．(Measure distance with Ultrasonic sensor.)
+ */
+long MakerBoard::Ultrasonic::Ranging(){
+  pinMode(TP,OUTPUT);
+  pinMode(EP,INPUT);
+
+  digitalWrite(TP, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TP, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TP, LOW);
+
+  long duration = pulseIn(EP,HIGH);
+  long distance_cm = duration /29 / 2 ;
+  return distance_cm;
+}

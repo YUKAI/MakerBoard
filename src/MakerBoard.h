@@ -46,6 +46,15 @@ class MakerBoard
     void motorPinSetup();
     static void motorPulseCounter();
     void motorPWMBegin();
+
+    class Ultrasonic {
+    public:
+        Ultrasonic(int TP, int EP);
+        long Ranging();
+    private:
+        int TP;
+        int EP;
+    };
 };
 
 #endif
