@@ -2,11 +2,12 @@
  * @file MakerBoard.h
  * @author Yoshinobu Obata
  * @brief Standard library for メイカーボード
- * @version 0.1
- * @date 2024-09-10
+ * @version 1.0.3
+ * @date 2026-01-20
  * Change log:
+ * 2026-01-20: Added Ultrasonic class for ultrasonic sensor support.
  * 
- * @copyright Copyright (c) 2024 Yukai Engineering Inc.
+ * @copyright Copyright (c) 2026 Yukai Engineering Inc.
  * 
  */
 #ifndef MakerBoard_H
