@@ -49,7 +49,7 @@ class MakerBoard
 
     class Ultrasonic {
     public:
-        Ultrasonic(int TP, int EP);
+        Ultrasonic(int Trig_Pin, int Echo_Pin);
         long Ranging();
     private:
         int TP;
