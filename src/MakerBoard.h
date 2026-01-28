@@ -26,8 +26,8 @@ class MakerBoard
     static const uint8_t DCM2_B = 3;
     static const uint8_t DCM3_A = 8;
     static const uint8_t DCM3_B = 9;
-    static const uint8_t DCM4_A = 7;
-    static const uint8_t DCM4_B = 6;
+    static const uint8_t DCM4_A = 6;
+    static const uint8_t DCM4_B = 7;
     // Servo motor IO pins
     static const uint8_t SERVO1 = 10;
     static const uint8_t SERVO2 = 11;
