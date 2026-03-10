@@ -1,6 +1,6 @@
 {
     "name": "MakerBoard",
-    "version": "1.0.0",
+    "version": "1.0.4",
     "description": "Library for MakerBoard(メイカーボード)",
     "keywords": "motor, arduino pro mini, pwm",
     "repository": {
